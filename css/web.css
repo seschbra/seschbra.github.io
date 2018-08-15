@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Nunito+Sans');
+
+body {
+	margin: 0;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.title {
+	font-size: 2em;
+	line-height: 2.2em;
+	margin: .2em 0;
+}
+
+img {
+	width: 100%;
+}
+
+.round {
+ border-radius: 50%;
+}
+
+header, section, footer {
+	max-width: 960px;
+	margin: 20px auto;
+}
+
+.box {
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.box > div {
+	padding: 0 10px;
+}
+
+.golden-ratio-small {
+	flex: 382;
+}
+
+.golden-ratio-big {
+	flex: 618;
+}
+
+header .box {
+ align-items: center;
+}
+
