@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Nunito+Sans');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+.title {
+	font-size: 2em;
+	line-height: 2.2em;
+	margin: .2em 0;
+}
+
+img {
+	width: 100%;
+	float: right;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+table {
+	width: 100%;
+	border: 0 solid transparent;
+	border-spacing: 5px;
+	margin: 15px -5px;	
+}
+
+th {
+	text-align: left;
+	font-weight: normal;
+}
+
+p {
+	text-align: justify;
+}
+
+.right {
+	float: right;
+}
+
+ul.spacious {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.spacious > li {
+	padding-bottom: 15px;
+}
+
+ul.spacious > li:last-of-type {
+	padding-bottom: 0;
+}
+
+header, section, footer {
+	max-width: 960px;
+	margin: 20px auto;
+}
+
+.box {
+	display: flex;
+	margin-left: -35px;
+	margin-right: -35px;
+}
+
+.box > div {
+	padding: 0 35px;
+}
+
+.golden-ratio-small {
+	flex: 382;
+}
+
+.golden-ratio-big {
+	flex: 618;
+}
+
+header .box {
+ align-items: center;
+}
+
+.print {
+	display: none;
+}
+
+@media print {  
+  @page {
+    size:  210mm 297mm;
+    margin: 5mm 25mm;
+  }
+  body {
+		font-size: .6em;  
+  }
+  img {
+		max-width: 50mm;  
+  }
+  .noprint {
+		display: none;  
+  }
+}
