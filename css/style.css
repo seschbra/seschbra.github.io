@@ -65,6 +65,10 @@ a:active:before {
 	right: 0;
 }
 
+.fab {
+    font-size: 1.2em;
+    vertical-align: text-top;
+}
 
 .title {
 	font-size: 2em;
