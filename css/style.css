@@ -75,8 +75,7 @@ a:active:before {
 img.responsive {
 	width: 100%;
 	height: auto;
-	max-width: 50mm;
-	text-align: right; 
+	max-width: 60mm;
 }
 
 img.qr {
