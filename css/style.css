@@ -4,6 +4,11 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Nunito Sans', sans-serif;
+	color: #030303;
+}
+
+body {
+margin: 0 35px;
 }
 
 h1, h2, h3, h4, h5, h6, .title {
@@ -12,9 +17,54 @@ h1, h2, h3, h4, h5, h6, .title {
 	font-weight: normal;
 }
 
-a {
-	text-decoration: none;
+strong {
+	letter-spacing: .07em;
 }
+
+a,
+a:link,
+a:visited {
+	vertical-align: text-bottom;
+	text-decoration: none;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	position: relative;
+	transition: color 0.3s ease;
+	color: #0920B9;
+}
+
+a:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	height: 1px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	background: #0920B9;
+}
+
+a:active,
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none !important;
+	color: #0920B9;
+}
+
+a:hover:before,
+a:focus:before,
+a:active:before {
+	right: 0;
+}
+
 
 .title {
 	font-size: 2em;
@@ -22,9 +72,16 @@ a {
 	margin: .2em 0;
 }
 
-img {
+img.responsive {
 	width: 100%;
-	float: right;
+	height: auto;
+	max-width: 50mm;
+	text-align: right; 
+}
+
+img.qr {
+	width: 100px;
+	margin-bottom: 15px;
 }
 
 .round {
@@ -49,6 +106,7 @@ p {
 
 .right {
 	float: right;
+	display: inline-block;
 }
 
 ul.spacious {
@@ -58,7 +116,8 @@ ul.spacious {
 }
 
 ul.spacious > li {
-	padding-bottom: 15px;
+	margin-bottom: 15px;
+	clear: both;
 }
 
 ul.spacious > li:last-of-type {
@@ -70,24 +129,6 @@ header, section, footer {
 	margin: 20px auto;
 }
 
-.box {
-	display: flex;
-	margin-left: -35px;
-	margin-right: -35px;
-}
-
-.box > div {
-	padding: 0 35px;
-}
-
-.golden-ratio-small {
-	flex: 382;
-}
-
-.golden-ratio-big {
-	flex: 618;
-}
-
 header .box {
  align-items: center;
 }
@@ -96,18 +137,55 @@ header .box {
 	display: none;
 }
 
+.box {
+	display: flex;
+	margin-left: -35px;
+	margin-right: -35px;
+}
+
+.box > div {
+	flex: 1;
+	padding: 0 35px;
+}
+
+.box > div.golden-ratio-small {
+	flex: 382;
+}
+
+.box > div.golden-ratio-big {
+	flex: 618;
+}
+	
+@media screen and (max-width: 800px) {
+	.box {
+		display: block;
+	}
+}
+
 @media print {  
-  @page {
-    size:  210mm 297mm;
-    margin: 5mm 25mm;
-  }
-  body {
-		font-size: .6em;  
-  }
-  img {
-		max-width: 50mm;  
-  }
-  .noprint {
+	@page {
+	   size:  210mm 297mm;
+	   margin: 7mm 15mm 7mm 25mm;
+	}
+	body {
+		font-size: .6em;
+		margin: 0; 
+	}
+	strong {
+		letter-spacing: .12em;
+	}
+	img.qr {
+		width: 20mm;
+	}
+	a,
+	a:link,
+	a:visited {
+		color: #030303;
+		}
+	.noprint {
 		display: none;  
-  }
+	}
+	.print {
+		display: block;
+	}
 }
