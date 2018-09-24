@@ -65,10 +65,6 @@ a:active:before {
 	right: 0;
 }
 
-.fab {
-    font-size: 1.2em;
-    vertical-align: text-top;
-}
 
 .title {
 	font-size: 2em;
@@ -76,10 +72,16 @@ a:active:before {
 	margin: .2em 0;
 }
 
+.fa, .fab, .fal, .far, .fas {
+	font-size: 1.2em;
+	vertical-align: text-top;
+	text-align: right;
+}
+
 img.responsive {
 	width: 100%;
 	height: auto;
-	max-width: 60mm;
+	max-width: 280px;
 }
 
 img.qr {
@@ -107,9 +109,22 @@ p {
 	text-align: justify;
 }
 
+span, a {
+	white-space: nowrap;
+}
+
+address {
+	font-style: normal;
+}
+
 .right {
+	list-style-position: outside;
 	float: right;
-	display: inline-block;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 1.5em;
 }
 
 ul.spacious {
@@ -168,7 +183,7 @@ header .box {
 @media print {  
 	@page {
 	   size:  210mm 297mm;
-	   margin: 7mm 15mm 7mm 25mm;
+	   margin: 2mm 15mm 2mm 25mm;
 	}
 	body {
 		font-size: .6em;
@@ -176,6 +191,9 @@ header .box {
 	}
 	strong {
 		letter-spacing: .12em;
+	}
+	img.responsive {
+		max-width: 60mm;
 	}
 	img.qr {
 		width: 20mm;
